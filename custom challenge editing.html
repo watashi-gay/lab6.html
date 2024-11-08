@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Custom challenge</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2 id="custom-setting-heading">New unit test custom challenge</h2>
+        <input type="text" class="challengeName" placeholder="Demo" />
+        <!-- difficulty setting and description -->
+        <div class="primary-detail">
+            <!-- difficulty -->
+            <div id="difficulty" class="difficulty-select">
+                <p class="section-label">Difficulty:</p>
+                <select class="difficulty-list">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <!-- description -->
+            <div class="short-description">
+                <p class="section-label">Short description:</p>
+                <input type="text" class="description-input" placeholder="Optional short description about this challenge..." />
+            </div>
+        </div>
+
+
+        <button class="custom-create" onclick="toggleTextarea()">Click here to open the Java(JUnit) IDE and edit your code</button>
+        <!-- text area -->
+        <textarea required placeholder="It's cricket here"></textarea>
+        
+
+        <script>
+            //function to toggle the visibility of the textarea
+            function toggleTextarea() {
+                var textarea = document.querySelector('textarea');
+                if (textarea.style.display === 'none' || textarea.style.display === '') {
+                    textarea.style.display = 'block';
+                } else {
+                    textarea.style.display = 'none';
+                    textarea.value = '';
+                }
+
+                if (challengeName.hasAttribute('readonly')) {
+                    challengeName.removeAttribute('readonly');
+                } else {
+                    challengeName.setAttribute('readonly', true);
+                }
+            }
+        </script>
+    </body>
+</html>

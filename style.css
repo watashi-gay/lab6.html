@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* challenge selection style */
+#custom-setting-heading {
+    background-color: #0099ff;
+    color: white;
+    padding: 20px;
+    width: 100vw;
+    margin-bottom: 30px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    gap: 40px;
+    margin: 10px;
+}
+
+.option-card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.option-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin: 20px;
+}
+
+.option-card h3 {
+    margin: 10px;
+}
+
+.label {
+    display: inline-block;
+    background-color: #222020;
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.option-card p{
+    margin: 5px;
+    color: grey;
+    text-align: center;
+    margin: 10px 15px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+}
+
+.cont-butt {
+    background-color: #0099ff;
+    color: #ffffff;
+    padding: 4px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.gui-butt {
+    padding: 4px 10px;
+    color: grey;
+    text-decoration: none;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+/* challenge editing style */
+.challengeName {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;    
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.primary-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+    margin-top: 20px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.primary-detail.section-label {
+    color: #504e70;
+    white-space: nowrap;
+    margin-left: 15px;
+}
+.difficulty-select, .short-description {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+.difficulty-list{
+    width: 100px;
+}
+.description-input {
+    width: 600px;
+}
+
+textarea {
+    margin-top: 10px;
+    width: 100%;
+    height: 500px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    resize: none;
+
+    display: none;/*initially hidden*/
+}
+textarea:is(:focus,:valid) {
+    border-color: indigo;
+    border-width: 3px;
+    padding: 9px;
+}
